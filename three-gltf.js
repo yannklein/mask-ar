@@ -5,7 +5,7 @@ const createGltf = (scene, size) => {
   // Load a glTF resource
   loader.load(
     // resource URL
-    'images/glasses/scene.gltf',
+    'assets/3d-objects/Mask_v2_reduced_cleaned.glb',
     // called when the resource is loaded
     (gltf) => {
 
