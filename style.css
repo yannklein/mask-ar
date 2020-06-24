@@ -8,6 +8,7 @@ body {
   height: 50%;
   flex-grow: 1;
   width: 60vh;
+  transform: rotateY(180deg);
 }
 
 .container {
