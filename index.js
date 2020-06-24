@@ -16,7 +16,7 @@ function init_threeScene(spec) {
   const threeStuffs = THREE.JeelizHelper.init(spec, detect_callback);
 
   // Scene objects
-  createGltf(threeStuffs, 11, {x:0, y:-0.1, z:0});
+  createGltf(threeStuffs, 10, {x:0, y:-0.1, z:0});
 
   //CREATE THE CAMERA
   THREECAMERA = THREE.JeelizHelper.create_camera();
