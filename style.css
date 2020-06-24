@@ -32,10 +32,6 @@ body {
   text-align: center;
 }
 
-.title img {
-  width: 100px;
-}
-
 .footer {
   margin: 32px;
 }
@@ -60,10 +56,6 @@ body {
     margin-left: 0;
     margin-top: 24px;
     font-size: 16px;
-  }
-
-  .title img {
-    width: 64px;
   }
 
   .ar-canvas {
