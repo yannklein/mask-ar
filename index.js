@@ -16,10 +16,20 @@ function init_threeScene(spec) {
   const threeStuffs = THREE.JeelizHelper.init(spec, detect_callback);
 
   // Scene objects
-  createGltf(threeStuffs, 0.13);
+  createGltf(threeStuffs, 11, {x:0, y:-0.1, z:0});
 
   //CREATE THE CAMERA
   THREECAMERA = THREE.JeelizHelper.create_camera();
+
+  // CREATE AN AMBIENT LIGHT
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+  threeStuffs.scene.add(ambientLight);
+
+  // CREATE A DIRECTIONALLIGHT
+  const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+  dirLight.position.set(100, 1000, 1000);
+  threeStuffs.scene.add(dirLight);
+
 } // end init_threeScene()
 
 // launched by body.onload():

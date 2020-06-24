@@ -1,4 +1,4 @@
-const createGltf = (scene, size) => {
+const createGltf = (scene, size, position=null, rotation=null) => {
   // Instantiate a loader
   var loader = new THREE.GLTFLoader();
 
@@ -13,6 +13,19 @@ const createGltf = (scene, size) => {
       const gltfObj = gltf.scene;
       gltfObj.scale.multiplyScalar(size);
       gltfObj.frustumCulled = false;
+
+      if(position) {
+        gltfObj.translateX(position.x);
+        gltfObj.translateY(position.y);
+        gltfObj.translateZ(position.z);
+      }
+
+      if(rotation) {
+        gltfObj.rotateX(rotation.x);
+        gltfObj.rotateY(rotation.y);
+        gltfObj.rotateZ(rotation.z);
+      }
+
       scene.faceObject.add(gltfObj);
 
       // gltf.animations; // Array<THREE.AnimationClip>
